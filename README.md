@@ -1,3 +1,6 @@
+![day-mode](https://i.imgur.com/CHOnGUs.png)
+![day-mode](https://i.imgur.com/YhMQRvi.png)
+
 # Interactive Landscape Day/Night Toggle
 
 > A stunning, purely visual day/night theme switcher built with modern web technologies. This isn't just a UI element; it's an animated digital diorama.
