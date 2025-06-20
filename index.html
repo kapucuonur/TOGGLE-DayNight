@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Landscape</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-night"> <!-- Start in night mode by default -->
+
+    <!-- Main Background Hills -->
+    <div class="main-hills-background">
+        <svg id="main-hill-back" class="main-hill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill-opacity="1" d="M0,224L48,229.3C96,235,192,245,288,250.7C384,256,480,256,576,234.7C672,213,768,171,864,165.3C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        <svg id="main-hill-front" class="main-hill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill-opacity="1" d="M0,288L60,261.3C120,235,240,181,360,176C480,171,600,213,720,229.3C840,245,960,235,1080,218.7C1200,203,1320,181,1380,170.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+
+    <div class="toggle-container">
+        <!-- Centered Sun/Moon -->
+        <div class="celestial-container">
+            <div class="sun"></div>
+            <div class="moon"></div>
+        </div>
+
+        <div class="stars-container">
+            <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+            <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+            <div class="shooting-star-container">
+                <div class="shooting-star"></div>
+                <div class="shooting-star"></div>
+            </div>
+        </div>
+
+        <div class="bird-container">
+            <div class="bird"></div>
+        </div>
+
+        <!-- SVG Hills -->
+        <div class="hills-container">
+            <svg id="toggle-hill-back" class="toggle-hill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 240"><path fill-opacity="1" d="M0,160L30,170C60,180,120,200,180,195C240,190,300,160,360,145C420,130,480,130,540,140C600,150,660,170,690,180L720,190L720,240L690,240C660,240,600,240,540,240C480,240,420,240,360,240C300,240,240,240,180,240C120,240,60,240,30,240L0,240Z"></path></svg>
+            <svg id="toggle-hill-front" class="toggle-hill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 240"><path fill-opacity="1" d="M0,200L40,185C80,170,160,140,240,145C320,150,400,190,480,200C560,210,640,190,680,180L720,170L720,240L680,240C640,240,560,240,480,240C400,240,320,240,240,240C160,240,80,240,40,240L0,240Z"></path></svg>
+        </div>
+
+        <div class="cactus-container">
+            <div class="cactus cactus-1"></div>
+            <div class="cactus cactus-2"></div>
+            <div class="cactus cactus-3"></div>
+        </div>
+        
+        <div class="toggle-track"></div>
+        <button class="toggle-handle" aria-label="Toggle Day and Night Mode"></button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
