@@ -18,7 +18,7 @@
     --day-bird: #222831;
 
     /* NIGHT MODE COLORS */
-    --body-bg-night: linear-gradient(180deg, #09141a 0%, #1f2e3e 100%);
+    --body-bg-night: linear-gradient(180deg, #1a2835 0%, #2d3b4a 100%);
     --night-sky: linear-gradient(180deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
     --night-moon: #EAEFD3;
     --night-toggle-hill-back: #31363F;
@@ -191,4 +191,118 @@ body.is-night #main-hill-front { fill: var(--night-main-hill-front); }
 .toggle-container.is-night .cactus::before,
 .toggle-container.is-night .cactus::after { 
     background-color: var(--night-cactus); 
+}
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    /* Tablet sizes */
+    :root {
+        --toggle-width: 650px;
+        --toggle-height: 260px;
+        --handle-diameter: 240px;
+    }
+    
+    /* Adjust celestial body positions */
+    .sun {
+        top: 35px;
+        right: 70px;
+    }
+    .moon {
+        top: 35px;
+        left: 70px;
+    }
+    
+    /* Adjust cactus sizes */
+    .cactus::before {
+        width: 20px;
+        height: 80px;
+    }
+    .cactus::after {
+        width: 15px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    /* Large phone sizes */
+    :root {
+        --toggle-width: 500px;
+        --toggle-height: 200px;
+        --handle-diameter: 180px;
+    }
+    
+    .sun, .moon {
+        width: 60px;
+        height: 60px;
+    }
+    .sun {
+        top: 25px;
+        right: 50px;
+    }
+    .moon {
+        top: 25px;
+        left: 50px;
+    }
+    
+    /* Adjust bird animation */
+    .bird {
+        animation: fly 8s linear infinite;
+    }
+    
+    @keyframes fly {
+        0% { transform: translateX(-100px); }
+        100% { transform: translateX(500px); }
+    }
+}
+
+@media (max-width: 500px) {
+    /* Small phone sizes */
+    :root {
+        --toggle-width: 320px;
+        --toggle-height: 128px;
+        --handle-diameter: 108px;
+        --padding: 6px;
+    }
+    
+    .toggle-container {
+        border-radius: 64px;
+    }
+    
+    .sun, .moon {
+        width: 40px;
+        height: 40px;
+    }
+    .sun {
+        top: 15px;
+        right: 30px;
+        box-shadow: 0 0 20px var(--day-sun);
+    }
+    .moon {
+        top: 15px;
+        left: 30px;
+    }
+    
+    /* Hide some elements on very small screens */
+    .cactus-2, .cactus-3 {
+        display: none;
+    }
+    .cactus-1 {
+        transform: scale(0.7);
+        left: 10%;
+    }
+    
+    /* Adjust bird animation */
+    .bird {
+        animation: fly 6s linear infinite;
+        top: 30%;
+    }
+    
+    @keyframes fly {
+        0% { transform: translateX(-100px); }
+        100% { transform: translateX(320px); }
+    }
+    
+    /* Reduce number of stars on small screens */
+    .star:nth-child(n+4) {
+        display: none;
+    }
 }
